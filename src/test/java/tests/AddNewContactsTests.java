@@ -18,7 +18,8 @@ public class AddNewContactsTests extends AppiumConfig {
                 .fillLoginRegistrationForm(Auth.builder()
                         .email("mara@gmail.com")
                         .password("Mmar123456$").build())
-                .submitLogin();
+                .submitLogin()
+                .isActivityTitleDisplayed("Contact list");
     }
 
     @Test

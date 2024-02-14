@@ -44,12 +44,10 @@ public class LoginTests extends AppiumConfig {
 
     @AfterMethod
     public void postCondition() {
-        if(new ContactListScreen(driver).isActivityTitleDisplayed("Contact list")){
-            new ContactListScreen(driver).logout();
-        }
-
-
-
+        new ContactListScreen(driver).logout();
     }
+
+
 }
+
 

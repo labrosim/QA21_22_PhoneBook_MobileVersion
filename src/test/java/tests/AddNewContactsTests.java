@@ -22,7 +22,7 @@ public class AddNewContactsTests extends AppiumConfig {
                 .isActivityTitleDisplayed("Contact list");
     }
 
-    @Test
+    @Test(invocationCount = 3)
     public void createNewContactSuccess() {
         int i = new Random().nextInt(1000) + 1000;
         Contact contact = Contact.builder()
